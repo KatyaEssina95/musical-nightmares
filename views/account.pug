@@ -1,0 +1,6 @@
+extends layout
+
+block content 
+  p ID: #{user.id}
+  p Profile: 
+    a(href=user.profileUrl) #{user.profileUrl}

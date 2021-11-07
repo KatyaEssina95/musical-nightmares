@@ -3,5 +3,13 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+  body 
+    unless user 
+      p
+        a(href='/auth/spotify') Log In
+    else 
+      p
+        a(href='/users/account') Account 
+      p
+        a(href='/auth/logout') Log Out
     block content
